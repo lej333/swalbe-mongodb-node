@@ -1,6 +1,6 @@
 # swalbe-mongodb-node
 
-This is a class library with basic CRUD functions for MongoDB with Mongoose. This is used to centralize basic validations to parameters and initialize a safe connection to MongoDB server. This class library is intented for all Node.js projects of Swalbe/lej333. All functions will always return an object.
+This is a class library with basic CRUD functions for MongoDB with Mongoose. This is used to centralize basic validations to parameters and initialize a safe connection to MongoDB server. All functions will always return an object. Even when you delete a record. This class library is intented for all Node.js projects of Swalbe/lej333. 
 
 - Validates passed record id with Mongoose.Types.ObjectId.isValid function.
 - Validates passed record when adding or updating record in MongoDB collection.
