@@ -71,6 +71,14 @@ describe('lib/helpers/mongoDb.updateById', () => {
     });
   });
 
+  it('update with badly formatted userId', async () => {
+    return Db.updateById('this-is-a-bad-id', user, null).then(() => {
+      throw 'We expected an error!';
+    }).catch((err) => {
+      ErrorTests(err, Messages.idNotValid);
+    });
+  });
+
   it('update without update input', async () => {
     return Db.updateById(userId, null, null).then(() => {
       throw 'We expected an error!';
