@@ -7,4 +7,4 @@ This is a class library with basic CRUD functions for MongoDB with Mongoose. Thi
 - Initializes a safe connection to MongoDB by checking if there is not a connection already opened. Mongoose will throw an error when an existing connection was still opened by concurrencing CRUD function.
 
 ### Note
-There are Mocha tests available. There is a schema for an users collection available so it will create correct collection for you. You need to create a vault with schluessel package and put an object with mongoServer property into it. Or change tests by you self.
+There are Mocha tests available. There is a schema for an users collection available so it will create test collection for you. You need to create a vault with schluessel package and put an object with mongoServer property into it. Or change tests by you self.
