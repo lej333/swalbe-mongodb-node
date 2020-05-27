@@ -81,6 +81,14 @@ describe('lib/helpers/mongoDb.deleteById', () => {
     return true;
   });
 
+  it('deleteById with badly formatted userId', async () => {
+    return Db.deleteById('this-is-a-bad-id', null).then(() => {
+      throw 'We expected an error!';
+    }).catch((err) => {
+      ErrorTests(err, Messages.idNotValid);
+    });
+  });
+
   it('deleteById with select logic', async () => {
     const result = await Db.add(user, null, Schema);
     Assert.isDefined(result.id, 'Example user were not added!');

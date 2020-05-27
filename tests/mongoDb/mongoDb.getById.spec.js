@@ -75,6 +75,14 @@ describe('lib/helpers/mongoDb.getById', () => {
     Assert.equal(result, null, 'Expects null response when no user is found');
   });
 
+  it('getById with badly formatted userId', async () => {
+    return Db.getById('this-is-a-bad-id', null).then(() => {
+      throw 'We expected an error!';
+    }).catch((err) => {
+      ErrorTests(err, Messages.idNotValid);
+    });
+  });
+
   it('getById without hash field', async () => {
     const search = {
       username: user.username
