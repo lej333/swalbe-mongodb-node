@@ -20,5 +20,5 @@ module.exports = {
 };
 ```
 
-### Note
+### Tests
 There are Mocha tests available which will run tests based on an users collection. There is a schema in the helpers folder available (users.model.js). You need to create a vault with schluessel package and put an object with mongoServer property into it. Or change tests by you self.
