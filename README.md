@@ -1,4 +1,4 @@
-# swalbe-mongodb
+# swalbe-mongodb-node
 
 This is a ES6 class library with basic CRUD functions for MongoDB with Mongoose. This library is created to centralize basic validations to parameters and initialize a safe connection to MongoDB server. All functions will always return an object from a MongoDB collection. Even when you delete a record. This class library is intented for all Node.js projects created by Swalbe/lej333 to reduce double and messed codes.
 
